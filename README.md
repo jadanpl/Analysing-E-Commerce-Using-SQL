@@ -23,7 +23,7 @@ For this project, I obtained the dataset from Kaggle. It contains sales data fro
 <img src="https://miro.medium.com/max/1050/1*Wk0H92Vj6kVmRp-NL18wiQ.png" alt="Result of query 9">
 
 # Summary 
-For the complete article, please check out <a href="https://jadangpooiling.medium.com/building-sql-project-with-e-commerce-dataset-from-kaggle-3c678d44fc0a">my Medium article</a>. Below are summary of the analysis.
+For the complete code explanation & analysis, please check out <a href="https://jadangpooiling.medium.com/building-sql-project-with-e-commerce-dataset-from-kaggle-3c678d44fc0a">my Medium article</a>. Below are summary of the analysis.
 1. Almost 50% of the customers were loyal customers (spend well and often) and champions (spend well and often, as well as make a recent purchase). The rest of the customers falls within the categories of potential loyalists, hibernating, customers needing attention, at risk, and about to sleep.
 2. There are 500 orders and 332 customers from 24 different cities and 19 states from April 2018 to March 2019.
 3. The most profitable cities are Pune, followed by Indore, Allahabad, and Delhi. This may be because these areas are more developed (e.g. having a better internet connection and better logistics). 
