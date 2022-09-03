@@ -22,5 +22,13 @@ For this project, I obtained the dataset from Kaggle. It contains sales data fro
 9. Find the total sales, total profit, and total quantity sold for each category and sub-category. Return the maximum cost and maximum price for each sub-category too. <br><br>
 <img src="https://miro.medium.com/max/1050/1*Wk0H92Vj6kVmRp-NL18wiQ.png" alt="Result of query 9">
 
-# Analysis
-https://jadangpooiling.medium.com/building-sql-project-with-e-commerce-dataset-from-kaggle-3c678d44fc0a
+# Summary 
+For the complete article, please check out <a href="https://jadangpooiling.medium.com/building-sql-project-with-e-commerce-dataset-from-kaggle-3c678d44fc0a">my Medium article</a>. Below are summary of the analysis.
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8.
