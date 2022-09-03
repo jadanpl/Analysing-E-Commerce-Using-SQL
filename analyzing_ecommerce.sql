@@ -55,7 +55,7 @@ SELECT * FROM customer_grouping;
 
 -- return the number & percentage of each customer segment
 SELECT 
-	customer_segment, 
+    customer_segment, 
     COUNT(DISTINCT CustomerName) AS num_of_customers,
     ROUND(COUNT(DISTINCT CustomerName) / (SELECT COUNT(*) FROM customer_grouping) *100,2) AS pct_of_customers
 FROM customer_grouping
@@ -65,7 +65,7 @@ ORDER BY pct_of_customers DESC;
 -- ********** Q U E R Y 2 **********
 -- number of orders, customers, cities, states
 SELECT COUNT(DISTINCT order_id) AS num_of_orders, # 500 distinct orders were made
-	   COUNT(DISTINCT CustomerName) AS num_of_customers, # 332 distinct customers
+       COUNT(DISTINCT CustomerName) AS num_of_customers, # 332 distinct customers
        COUNT(DISTINCT City) AS num_of_cities, # 24 distinct cities
        COUNT(DISTINCT State) AS num_of_states
 FROM combined_orders;
@@ -127,9 +127,9 @@ SUM(Profit) AS total_profit, SUM(Quantity) AS total_quantity
 FROM combined_orders
 GROUP BY month_of_year
 ORDER BY month_of_year= 'April-2018' DESC, 
-		 month_of_year= 'May-2018' DESC,
-		 month_of_year= 'June-2018' DESC,
-		 month_of_year= 'July-2018' DESC,
+	 month_of_year= 'May-2018' DESC,
+	 month_of_year= 'June-2018' DESC,
+	 month_of_year= 'July-2018' DESC,
          month_of_year= 'August-2018' DESC,
          month_of_year= 'September-2018' DESC,
          month_of_year= 'October-2018' DESC,
@@ -143,7 +143,7 @@ ORDER BY month_of_year= 'April-2018' DESC,
 -- find out the sales for each category in each month
 CREATE VIEW sales_by_category AS
 SELECT CONCAT(SUBSTR(MONTHNAME (STR_TO_DATE(order_date, '%d-%m-%Y')),1,3),"-",SUBSTR(YEAR(STR_TO_DATE(order_date, '%d-%m-%Y')),3,2)) AS order_monthyear,
-	   Category, SUM(Amount) AS Sales
+	Category, SUM(Amount) AS Sales
 FROM combined_orders
 GROUP BY order_monthyear,Category;
 
@@ -152,11 +152,11 @@ SELECT * FROM sales_by_category;
 -- check if the sales hit the target set for each category in each month
 CREATE VIEW sales_vs_target AS 
 SELECT 
-	*, 
+    *, 
     CASE
-		WHEN Sales >= Target THEN 'Hit'
+    	WHEN Sales >= Target THEN 'Hit'
         ELSE 'Fail'
-			END AS hit_or_fail
+		END AS hit_or_fail
 FROM
     (SELECT s.order_monthyear, s.Category, s.Sales, t.Target
     FROM sales_by_category AS s
@@ -184,7 +184,7 @@ ON h.Category = f.Category;
 -- electronic games & tables subcategories resulted in loss
 CREATE VIEW order_details_by_total AS 
 SELECT Category, sub_category, 
-	   SUM(Quantity) AS total_order_quantity, 
+       SUM(Quantity) AS total_order_quantity, 
        SUM(Profit) AS total_profit, 
        SUM(Amount) AS total_amount 
 FROM order_details
@@ -197,7 +197,7 @@ SELECT * FROM order_details_by_total;
 CREATE VIEW order_details_by_unit AS 
 SELECT Category, sub_category, MAX(cost_per_unit) AS max_cost, MAX(price_per_unit) AS max_price
 FROM (SELECT *, round((Amount-Profit)/Quantity,2) AS cost_per_unit, round(Amount/Quantity,2) AS price_per_unit 
-	  FROM order_details)c
+      FROM order_details)c
 GROUP BY sub_category      
 ORDER BY max_cost DESC;
 
