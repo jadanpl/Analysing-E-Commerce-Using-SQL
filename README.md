@@ -1,5 +1,5 @@
 # Analysing-E-Commerce-Using-SQL
-For this project, I obtained the dataset from Kaggle. It contains sales data from an Indian E-commerce website spanning from April 2018 to march 2019. Below is the entity-relationship diagram that I created using template on MIRO application. 
+For this project, I obtained the dataset from Kaggle. It contains sales data from an Indian E-commerce website spanning from April 2018 to march 2019. Below is the entity-relationship diagram that I created using template on MIRO application. <br>
 <img src="https://miro.medium.com/max/1050/1*7K1z19CMh_P0KJvJHoo1Eg.jpeg" alt="ER diagram">
 
 # Hypothetical Questions
