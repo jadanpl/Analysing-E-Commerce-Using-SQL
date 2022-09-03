@@ -12,4 +12,4 @@ For this project, I obtained the dataset from Kaggle. It contains sales data fro
 8. D
 9. D
 
-# Results & AnalysiS
+# Results & Analysis
